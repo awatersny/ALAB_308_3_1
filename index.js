@@ -28,7 +28,7 @@
 // Part 2: Prime Time
 
 console.log("\n\n")
-console.log("Part 2: Prime Time")
+console.log("Part 2: Prime Time\n")
 // Now we will move onto something slightly more complex.
 
 // Context: A prime number is any whole number greater than 1 that cannot be exactly divided by any whole number other than itself and 1. For example, the number 5 is prime because it cannot be divided by 4, 3, or 2; it can only be divided by itself (5) and 1. Similarly, the numbers 7 and 11 are prime. As numbers become larger, determining whether or not they are prime is increasingly difficult, but loops make this process relatively easy!
@@ -37,18 +37,24 @@ console.log("Part 2: Prime Time")
 
 // Declare an arbitrary number, n.
 
-let n = 20
-let nIsPrime = true
-if (n > 3) {
-  // Create a loop that searches for the next prime number, starting at n and incrementing from there.
-  for (let i = 2; i < n; i++) {
-    if (n % i === 0){
-      nIsPrime = false
+let n = 0
+console.log(`After ${n},`)
+let nIsPrime = false
+// Create a loop that searches for the next prime number, starting at n and incrementing from there.
+while (!nIsPrime)
+{
+  n++
+  nIsPrime = true
+  if (n > 0) {
+    for (let i = 2; i < n; i++) {
+      if (n % i === 0){
+        nIsPrime = false
+      }
     }
   }
-}
+} 
 // As soon as you find the prime number, log that number and exit the loop.
-console.log(n, "\t", nIsPrime ? "prime" : "not prime")
+console.log(`${n} is the next prime number.`)
 
 // Continuing with the example above, if n is equal to 4, your loop should log 5. Similarly, if n is 5, it should log 7, and if n is 9, it should log 11. Test your loop with higher numbers and reference an online prime number table to determine the accuracy of your code.
 
@@ -59,7 +65,7 @@ console.log(n, "\t", nIsPrime ? "prime" : "not prime")
 // Part 3: Feeling Loopy
 
 console.log("\n\n")
-console.log("Part 3: Feeling Loopy")
+console.log("Part 3: Feeling Loopy\n")
 // As a final task, solve the following practical problem regarding string processing.
 
 // Context: A CSV file, or “Comma-Separated Values” file is traditionally used to store tabular data. You may be familiar with CSVs through past use of programs such as Microsoft Excel or Google Sheets. While each of these programs save their data in different formats to preserve style (e.g., font color or cell backgrounds), at their core, they are storing CSV data.
