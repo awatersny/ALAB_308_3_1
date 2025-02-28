@@ -6,7 +6,8 @@
 // Loop through all numbers from 1 to 100.
 for (let i = 1; i <= 100; i++){
   // If a number is divisible by both 3 and 5, log “Fizz Buzz.”
-  if (i % 3 === 0 && i % 5 === 0) {
+  // All multiples of 15 are multiples of 3 and 5
+  if (i % 15 === 0) {
     console.log("fizzbuzz")
   }
   // If a number is divisible by 3, log “Fizz.”
