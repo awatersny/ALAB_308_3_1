@@ -3,27 +3,27 @@
 // To begin, solve the following classic “Fizz Buzz” problem. There are a few different ways to do this - experiment with what you think is the most efficient. Once you have solved the problem, ask yourself if there could be another way; and if so, would it be better.
 // Accomplish the following:
 
-console.log("Part 1: Fizz Buzz")
-// Loop through all numbers from 1 to 100.
-for (let i = 1; i <= 100; i++){
-  // If a number is divisible by both 3 and 5, log “Fizz Buzz.”
-  // All multiples of 15 are multiples of 3 and 5
-  if (i % 15 === 0) {
-    console.log("fizzbuzz")
-  }
-  // If a number is divisible by 3, log “Fizz.”
-  else if (i % 3 === 0) {
-    console.log("fizz")
-  }
-  // If a number is divisible by 5, log “Buzz.”
-  else if (i % 5 === 0) {
-    console.log("buzz")
-  }
-  // If a number is not divisible by either 3 or 5, log the number.
-  else {
-    console.log(i)
-  }
-}
+// console.log("Part 1: Fizz Buzz")
+// // Loop through all numbers from 1 to 100.
+// for (let i = 1; i <= 100; i++){
+//   // If a number is divisible by both 3 and 5, log “Fizz Buzz.”
+//   // All multiples of 15 are multiples of 3 and 5
+//   if (i % 15 === 0) {
+//     console.log("fizzbuzz")
+//   }
+//   // If a number is divisible by 3, log “Fizz.”
+//   else if (i % 3 === 0) {
+//     console.log("fizz")
+//   }
+//   // If a number is divisible by 5, log “Buzz.”
+//   else if (i % 5 === 0) {
+//     console.log("buzz")
+//   }
+//   // If a number is not divisible by either 3 or 5, log the number.
+//   else {
+//     console.log(i)
+//   }
+// }
 
 // Part 2: Prime Time
 
@@ -37,9 +37,18 @@ console.log("Part 2: Prime Time")
 
 // Declare an arbitrary number, n.
 
-// Create a loop that searches for the next prime number, starting at n and incrementing from there.
-
+let n = 20
+let nIsPrime = true
+if (n > 3) {
+  // Create a loop that searches for the next prime number, starting at n and incrementing from there.
+  for (let i = 2; i < n; i++) {
+    if (n % i === 0){
+      nIsPrime = false
+    }
+  }
+}
 // As soon as you find the prime number, log that number and exit the loop.
+console.log(n, "\t", nIsPrime ? "prime" : "not prime")
 
 // Continuing with the example above, if n is equal to 4, your loop should log 5. Similarly, if n is 5, it should log 7, and if n is 9, it should log 11. Test your loop with higher numbers and reference an online prime number table to determine the accuracy of your code.
 
@@ -119,7 +128,7 @@ for (pos = 0; pos < data.length; pos++) {
   if (data[pos] === "\n" || pos === data.length - 1) {
     // Log each row of data.
     // You do not need to format the data, the following works well.
-    console.log(cell1, cell2, cell3, cell4)
+    // console.log(cell1, cell2, cell3, cell4)
     commaCount = 0
     cell1 = ""
     cell2 = ""
