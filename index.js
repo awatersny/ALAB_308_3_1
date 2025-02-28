@@ -70,11 +70,14 @@ let formatted = ""
   while (pos < data.length) {
     // When you encounter a comma, move to the next cell.
     if (data[pos] === ",") {
-      formatted += "\t"
+      formatted += "\t\t|"
+    }
+    // When you encounter the “\r\n” sequence, move to the next “row.”
+    else if (data[pos] === "\n") {
+      formatted += "\n_______________________________________________________________\n"
     } else {
       formatted += data[pos]
     }
-    // When you encounter the “\r\n” sequence, move to the next “row.”
     // Log each row of data.
     //   You do not need to format the data, the following works well.
     //   console.log(cell1, cell2, cell3, cell4);
